@@ -1,0 +1,61 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Morlet Wavelet-KAN for Breast Cancer Histopathology Classification"
+version: "v1.0.0"
+date-released: "2025-02-08"
+authors:
+  - family-names: "Jamadar"
+    given-names: "Irshad"
+    affiliation: "MIT Art, Design and Technology University, Pune, India"
+    email: "irshadjamadar@mituniversity.edu"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.18525841"
+    description: "Zenodo DOI"
+  - type: other
+    value: "MITU22PHMT0002"
+    description: "PhD Registration Number"
+repository-code: "https://github.com/ISJBTC/MWKAN"
+url: "https://github.com/ISJBTC/MWKAN"
+license: MIT
+license-url: "https://opensource.org/licenses/MIT"
+keywords:
+  - "breast cancer"
+  - "histopathology"
+  - "deep learning"
+  - "wavelet transform"
+  - "Morlet wavelet"
+  - "Kolmogorov-Arnold Network"
+  - "KAN"
+  - "medical imaging"
+  - "binary classification"
+  - "PyTorch"
+abstract: >
+  Implementation of Morlet Wavelet-enhanced Kolmogorov-Arnold Network (KAN) 
+  for binary classification of breast cancer histopathology images. 
+  This architecture integrates learnable Morlet wavelet transformations 
+  with multi-layer KAN structure to achieve accurate classification 
+  of histopathological images into benign and malignant categories. 
+  The implementation includes comprehensive training, evaluation, 
+  and visualization tools for reproducible research.
+preferred-citation:
+  type: thesis
+  authors:
+    - family-names: "Jamadar"
+      given-names: "Irshad"
+  title: "An Intelligent Approach for Prediction of Breast Cancer with Mathematical Techniques"
+  thesis-type: "PhD thesis"
+  institution:
+    name: "MIT Art, Design and Technology University"
+    city: "Pune"
+    country: "IN"
+  year: 2025
+  department: "Department of Applied Science and Humanities"
+references:
+  - type: software
+    title: "Morlet Wavelet-KAN GitHub Repository"
+    authors:
+      - family-names: "Jamadar"
+        given-names: "Irshad"
+    year: 2025
+    repository-code: "https://github.com/ISJBTC/MWKAN"
