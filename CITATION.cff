@@ -12,9 +12,7 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.18525841"
     description: "Zenodo DOI"
-  - type: other
-    value: "MITU22PHMT0002"
-    description: "PhD Registration Number"
+  
 repository-code: "https://github.com/ISJBTC/MWKAN"
 url: "https://github.com/ISJBTC/MWKAN"
 license: MIT
@@ -30,21 +28,23 @@ keywords:
   - "medical imaging"
   - "binary classification"
   - "PyTorch"
+  - "IDC"
+  - "Kaggle dataset"
 abstract: >
   Implementation of Morlet Wavelet-enhanced Kolmogorov-Arnold Network (KAN) 
   for binary classification of breast cancer histopathology images. 
   This architecture integrates learnable Morlet wavelet transformations 
   with multi-layer KAN structure to achieve accurate classification 
   of histopathological images into benign and malignant categories. 
-  The implementation includes comprehensive training, evaluation, 
+  The implementation uses the Breast Histopathology Images dataset from Kaggle 
+  (IDC classification) and includes comprehensive training, evaluation, 
   and visualization tools for reproducible research.
 preferred-citation:
   type: thesis
   authors:
     - family-names: "Jamadar"
       given-names: "Irshad"
-  title: "An Intelligent Approach for Prediction of Breast Cancer with Mathematical Techniques"
-  thesis-type: "PhD thesis"
+  
   institution:
     name: "MIT Art, Design and Technology University"
     city: "Pune"
@@ -59,3 +59,20 @@ references:
         given-names: "Irshad"
     year: 2025
     repository-code: "https://github.com/ISJBTC/MWKAN"
+  - type: article
+    title: "Deep learning for digital pathology image analysis: A comprehensive tutorial with selected use cases"
+    authors:
+      - family-names: "Janowczyk"
+        given-names: "Andrew"
+      - family-names: "Madabhushi"
+        given-names: "Anant"
+    journal: "Journal of Pathology Informatics"
+    volume: 7
+    year: 2016
+    doi: "10.4103/2153-3539.186902"
+  - type: data
+    title: "Breast Histopathology Images"
+    authors:
+      - name: "Paul Mooney"
+    year: 2017
+    url: "https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images"
