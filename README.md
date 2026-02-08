@@ -201,18 +201,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Acknowledgments
-
-- MIT Art, Design and Technology University, Pune
-- Supervisor: Prof. Dr. Krishna Kumar
-- Department of Applied Science and Humanities
-
 ## Contact
 
 **Author**: Irshad Jamadar  
 **Institution**: MIT Art, Design and Technology University, Pune  
-**Registration**: MITU22PHMT0002  
-**Email**: irshadjamadar@mituniversity.edu
+**Email**: jamadarirshad@gmail.com
 
 ## Technical Support
 
@@ -230,5 +223,3 @@ For issues or questions:
   - Training visualization tools
 
 ---
-
-**Note**: This implementation is part of PhD research on intelligent approaches for breast cancer prediction using mathematical techniques.
