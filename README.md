@@ -3,6 +3,7 @@
 [![DOI](https://zenodo.org/badge/1152859414.svg)](https://doi.org/10.5281/zenodo.18525841)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Dataset](https://img.shields.io/badge/Dataset-Kaggle-20BEFF)](https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images)
 
 Implementation of Morlet Wavelet-enhanced Kolmogorov-Arnold Network (KAN) for binary classification of breast cancer histopathology images.
 
@@ -17,6 +18,44 @@ This repository contains the complete implementation of a novel deep learning ar
 - **Binary Classification**: Benign vs Malignant histopathology image classification
 - **Comprehensive Evaluation**: Full metrics including accuracy, precision, recall, F1-score, and confusion matrix
 - **Reproducible Results**: Fixed random seed (42) for consistent results
+
+## Dataset
+
+This implementation uses the **Breast Histopathology Images** dataset from Kaggle:
+
+**Source**: [Kaggle - Breast Histopathology Images](https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images)
+
+**Dataset Details**:
+- **Total Images**: 277,524 patches (50×50 pixels each)
+- **Classes**: 
+  - IDC Negative (benign): 198,738 patches
+  - IDC Positive (malignant): 78,786 patches
+- **Image Format**: PNG
+- **Original Resolution**: Extracted from 162 whole mount slide images
+- **Staining**: H&E stained breast tissue samples
+
+**Citation**:
+```bibtex
+@article{janowczyk2016deep,
+  title={Deep learning for digital pathology image analysis: A comprehensive tutorial with selected use cases},
+  author={Janowczyk, Andrew and Madabhushi, Anant},
+  journal={Journal of Pathology Informatics},
+  volume={7},
+  pages={29},
+  year={2016},
+  publisher={Wolters Kluwer--Medknow Publications},
+  doi={10.4103/2153-3539.186902}
+}
+```
+
+**Note**: The dataset patches are originally 50×50 pixels. Our implementation resizes them to 128×128 pixels for processing.
+
+### How to Download Dataset
+
+1. **Visit Kaggle**: https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images
+2. **Download** the dataset (requires free Kaggle account)
+3. **Extract** the downloaded archive
+4. **Organize** images into the required structure (see Dataset Preparation section)
 
 ## Architecture
 
@@ -63,9 +102,9 @@ Install all dependencies:
 pip install -r requirements.txt
 ```
 
-## Dataset Structure
+## Dataset Preparation
 
-Organize your histopathology images as follows:
+After downloading from Kaggle, organize your histopathology images as follows:
 
 ```
 project_root/
@@ -80,6 +119,14 @@ project_root/
         ├── image002.png
         └── ...
 ```
+
+**Steps to prepare:**
+
+1. **Download** dataset from [Kaggle](https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images)
+2. **Extract** all images from the downloaded archive
+3. **Separate** IDC-negative images into `Balanced/benign/`
+4. **Separate** IDC-positive images into `Balanced/malignant/`
+5. **Balance** the dataset if desired (optional - subsample majority class)
 
 **Supported image formats**: PNG, JPG, JPEG, BMP
 
@@ -102,7 +149,7 @@ The script will:
 ### Training Parameters
 
 Default configuration:
-- **Image size**: 128×128 pixels
+- **Image size**: 128×128 pixels (resized from original 50×50)
 - **Batch size**: 64
 - **Learning rate**: 0.0001
 - **Optimizer**: Adam
@@ -167,7 +214,7 @@ Output: 32 → 2 (Linear)
 
 Images are preprocessed with:
 1. Conversion to grayscale
-2. Resize to 128×128 pixels
+2. Resize from 50×50 to 128×128 pixels
 3. Tensor conversion
 4. Normalization: mean=0.5, std=0.5
 
@@ -175,13 +222,15 @@ Images are preprocessed with:
 
 For reproducible results:
 - Random seed: 42 (set in data splitting)
-- Fixed train/validation/test split ratios
+- Fixed train/validation/test split ratios (60/20/20)
 - Deterministic data loading
+- Fixed dataset source (Kaggle)
 
 ## Citation
 
 If you use this code in your research, please cite:
 
+**This Software:**
 ```bibtex
 @software{jamadar2025mwkan,
   author = {Jamadar, Irshad},
@@ -193,18 +242,39 @@ If you use this code in your research, please cite:
 }
 ```
 
+**Dataset:**
+```bibtex
+@article{janowczyk2016deep,
+  title={Deep learning for digital pathology image analysis: A comprehensive tutorial with selected use cases},
+  author={Janowczyk, Andrew and Madabhushi, Anant},
+  journal={Journal of Pathology Informatics},
+  volume={7},
+  pages={29},
+  year={2016},
+  publisher={Wolters Kluwer--Medknow Publications},
+  doi={10.4103/2153-3539.186902}
+}
+```
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Note**: The dataset used is subject to its own terms of use. Please refer to the [Kaggle dataset page](https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images) for dataset licensing information.
 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+## Acknowledgments
+
+- **Dataset**: Paul Mooney (Kaggle) for curating and sharing the Breast Histopathology Images dataset
+
 ## Contact
 
 **Author**: Irshad Jamadar  
-**Institution**: MIT Art, Design and Technology University, Pune  
+**Institution**: MIT Art, Design and Technology University, Pune   
 **Email**: jamadarirshad@gmail.com
 
 ## Technical Support
@@ -219,7 +289,12 @@ For issues or questions:
 - **v1.0.0** (2025-02-08): Initial release
   - Complete Morlet Wavelet-KAN implementation
   - Binary classification for breast cancer histopathology
+  - Trained on Kaggle Breast Histopathology Images dataset
   - Comprehensive evaluation metrics
   - Training visualization tools
 
 ---
+
+**Note**: This implementation is part of PhD research on intelligent approaches for breast cancer prediction using mathematical techniques.
+
+**Dataset Source**: https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images
