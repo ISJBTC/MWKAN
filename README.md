@@ -193,17 +193,6 @@ If you use this code in your research, please cite:
 }
 ```
 
-**Related Thesis:**
-```bibtex
-@phdthesis{jamadar2025thesis,
-  author = {Jamadar, Irshad},
-  title = {An Intelligent Approach for Prediction of Breast Cancer with Mathematical Techniques},
-  school = {MIT Art, Design and Technology University, Pune},
-  year = {2025},
-  type = {PhD Thesis}
-}
-```
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
