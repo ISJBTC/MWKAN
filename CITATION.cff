@@ -12,7 +12,6 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.18525841"
     description: "Zenodo DOI"
-  
 repository-code: "https://github.com/ISJBTC/MWKAN"
 url: "https://github.com/ISJBTC/MWKAN"
 license: MIT
@@ -44,7 +43,7 @@ preferred-citation:
   authors:
     - family-names: "Jamadar"
       given-names: "Irshad"
-  
+  title: "An Intelligent Approach for Prediction of Breast Cancer with Mathematical Techniques"
   institution:
     name: "MIT Art, Design and Technology University"
     city: "Pune"
